@@ -6,7 +6,11 @@
 </head>
 <body>
     <a-scene background="color: #afafaf">
-	<a-entity id="ground" geometry="height: 0.2; depth: 50; width: 50" material="src: Mars.jpg; color: #831b1b; metalness: 0.1; repeat: 50 20; roughness: 1; emissive: #0a0a0a"></a-entity>
+	<a-entity id="environment" environment="preset: forest; fog: NaN; seed: 8; skyType: gradient; skyColor: #24b59f; horizonColor: #eff9b7; lightPosition: -1.2 0.88 -0.55; ground: noise; groundYScale: 4.18; groundTexture: squares; groundColor: #937a24; groundColor2: #987d2e; dressing: trees; dressingAmount: 500; dressingColor: #888b1d; dressingScale: 1; dressingVariance: 10 10 10; gridColor: #c5a543">
+		<a-entity position="0 50 0" light="type: hemisphere; color: #91dacf; intensity: 0.6; groundColor: #937a24"></a-entity>
+		<a-entity position="-1.2 0.88 -0.55" light="intensity: 0.6; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10"></a-entity>
+		<a-sky radius="200" theta-length="110" material="shader: standard; src: aframe/60089a083829d.jpg" geometry="" id="sky1"></a-sky></a-entity>
+	 <a-entity id="ground" geometry="height: 0.2; depth: 50; width: 50" material="src: Mars.jpg; color: #831b1b; metalness: 0.1; repeat: 50 20; roughness: 1; emissive: #0a0a0a"></a-entity>
         <a-entity position="2 1 1"  text="anchor: left; value: RRWTS; width: 10; color: white"></a-entity>
 	<a-entity text="align: center; value: B.BANDYCH; width: 11 color:white" position="4.068 2.054 1.799" rotation="0 -29.626999999999995 0" id="class"></a-entity>
 	<a-entity id="pointLight" light="type: point; intensity: 0.25" position="0 3 3"></a-entity>	
